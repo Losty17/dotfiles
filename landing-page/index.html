@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home~</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            overflow: hidden;
+            font-family: 'Roboto', monospace;
+            font-size: 1.2vw;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: url(res/rain.webp);
+            background-size: cover;
+            backdrop-filter: blur(.5vw);
+            color: white;
+        }
+        .center {
+            width: 35%;
+            height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .image {
+            background: url(res/raphi.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 35vh;
+            width: 35vh;
+            border-radius: 1vw;
+            box-shadow: .1vw .1vw .5vw .5vw rgba(0,0,0,0.5);
+        }
+        .divider {
+            border-left: .2vw solid rgb(255, 255, 255);
+            border-radius: 1vw;
+            margin: 0 2vw;
+            height: 30vh;
+        }
+        .item-container {
+            height: 20%;
+        }
+        .content {
+            display: flex;
+        }
+        .items {
+            list-style: none;
+            text-align: right;
+        }
+        ul:nth-child(1) {
+            text-align: left;
+        }
+        h1 {
+            margin-bottom: 15%;
+        }
+        h1:after {
+            content: "";
+            display: block;
+            width: 60%;
+            border-bottom: .2vw solid white;
+            border-radius: 1vw;
+            margin: 0 auto;
+            margin-top: 5%;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="center-vertical image"></div>
+        <div class="center-vertical divider"></div>
+        <div class="center-vertical item-container">
+            <h1>hello~ ♡</h1>
+            <div class="content">
+                <ul class="items">
+                    <li><a href="https://github.com">github</a></li>
+                    <li><a href="https://twitter.com">twitter</a></li>
+                    <li><a href="https://linkedin.com">linkedin</a></li>
+                    <li><a href="https://instagram.com">instagram</a></li>
+                </ul>
+                <ul class="items">
+                    <li><a href="https://reddit.com/r/unixporn">r/unixporn</a></li>
+                    <li><a href="https://web.whatsapp.com/">whatsapp</a></li>
+                    <li><a href="https://discord.com/app">discord</a></li>
+                    <li><a href="https://stackoverflow.com/">stack</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
