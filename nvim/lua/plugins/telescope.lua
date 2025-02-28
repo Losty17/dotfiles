@@ -1,11 +1,19 @@
 return {
   'nvim-telescope/telescope.nvim', tag = '0.1.8',
-  dependencies = { 
+  dependencies = {
     'nvim-lua/plenary.nvim',
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
   },
   config = function ()
-    require('telescope').setup({})
+    require('telescope').setup({
+      defaults = {
+        file_ignore_patterns = { ".git/", "node_modules/", "*.stories.*" },
+        -- `hidden = true` will still show the files if you use `:Telescope find_files hidden=true`
+        hidden = true,
+        -- no_ignore = false, -- Search in .gitignore
+        case_mode = "smart_case",
+      },
+    })
     require('telescope').load_extension('fzf')
   end,
   keys = {
@@ -41,3 +49,4 @@ return {
     },
   },
 }
+

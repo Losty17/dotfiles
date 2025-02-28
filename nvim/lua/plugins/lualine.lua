@@ -39,26 +39,27 @@ return {
       theme = bubbles_theme,
       component_separators = '',
       section_separators = { left = '', right = '' },
+      disabled_filetypes = { 'Avante', 'AvanteInput', 'AvanteSelectedFiles' },
     },
     sections = {
-      lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+      lualine_a = { { 'mode', separator = { left = '' } } },
       lualine_b = { 'filename', 'branch' },
       lualine_c = {
         '%=', --[[ add your center compoentnts here in place of this comment ]]
       },
       lualine_x = {},
-      lualine_y = { 'filetype', 'progress' },
+      lualine_y = {},
       lualine_z = {
-        { 'location', separator = { right = '' }, left_padding = 2 },
+        { 'location', separator = { left = '', right = '' } },
       },
     },
     inactive_sections = {
-      lualine_a = { 'filename' },
+      lualine_a = {},
       lualine_b = {},
       lualine_c = {},
       lualine_x = {},
       lualine_y = {},
-      lualine_z = { 'location' },
+      lualine_z = {},
     },
     tabline = {},
     extensions = {},
