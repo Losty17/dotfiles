@@ -7,10 +7,10 @@ return {
   config = function ()
     require('telescope').setup({
       defaults = {
-        file_ignore_patterns = { ".git/", "node_modules/", "*.stories.*" },
+        file_ignore_patterns = { ".git/", "node_modules/", "*.stories.*", "*.lock" },
         -- `hidden = true` will still show the files if you use `:Telescope find_files hidden=true`
         hidden = true,
-        -- no_ignore = false, -- Search in .gitignore
+        no_ignore = true, -- Search in .gitignore
         case_mode = "smart_case",
       },
     })
@@ -19,7 +19,7 @@ return {
   keys = {
     {
       "<leader>ff",
-      "<cmd>Telescope find_files<CR>",
+      "<cmd>Telescope find_files hidden=true<CR>",
       mode = "n"
     },
     {

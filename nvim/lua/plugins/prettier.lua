@@ -3,7 +3,7 @@ return {
     'MunifTanjim/prettier.nvim',
     dependencies = {
       'neovim/nvim-lspconfig',
-      'jose-elias-alvarez/null-ls.nvim'
+      'nvimtools/none-ls.nvim', -- replacement for null-ls.nvim 
     },
     config = function()
       local null_ls = require("null-ls")

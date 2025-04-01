@@ -39,4 +39,6 @@ esac
 export NODE_OPTIONS=$NODE_OPTIONS' --openssl-legacy-provider'
 
 # gemini key
-export GEMINI_API_KEY="AIzaSyDt-KPx6qfXj3gHsc5dnRMhDd9_-VGMlJ8"
+source ~/.config/.secrets
+
+eval $(thefuck --alias)
