@@ -42,3 +42,5 @@ export NODE_OPTIONS=$NODE_OPTIONS' --openssl-legacy-provider'
 source ~/.config/.secrets
 
 eval $(thefuck --alias)
+
+. "$HOME/.local/bin/env"

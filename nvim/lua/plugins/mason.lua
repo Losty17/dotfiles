@@ -35,6 +35,18 @@ return {
               }
             })
 
+            lspconfig.pyright.setup({
+              settings = {
+                python = {
+                  analysis = {
+                    typeCheckingMode = "basic",
+                    autoSearchPaths = true,
+                    useLibraryCodeForTypes = true,
+                  },
+                },
+              },
+            })
+
             -- Execute orginize imports on saves
             vim.api.nvim_create_autocmd('BufWritePre', {
               desc = "Organize Imports on Save",

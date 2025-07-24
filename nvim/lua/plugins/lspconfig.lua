@@ -42,9 +42,17 @@ return {
     },
     {
         'hrsh7th/nvim-cmp',
-        dependencies = { 'hrsh7th/cmp-nvim-lsp' },
+        dependencies = {
+          'hrsh7th/cmp-nvim-lsp',
+          'L3MON4D3/LuaSnip',
+          'mlaursen/vim-react-snippets', -- Snippets for react
+        },
         config = function()
             local cmp = require('cmp')
+            require('vim-react-snippets').lazy_load() -- Load react snippets lazily
+
+            local snippets_config = require('vim-react-snippets.config')
+            snippets_config.readonly_props = false -- Disable readonly props for snippets
 
             cmp.setup({
                 sources = { { name = 'nvim_lsp' } },
